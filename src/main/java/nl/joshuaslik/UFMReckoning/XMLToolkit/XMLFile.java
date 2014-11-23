@@ -7,13 +7,13 @@ package nl.joshuaslik.UFMReckoning.XMLToolkit;
  */
 public class XMLFile {
 	
-	XMLTag mastertag = new XMLTag();
+	XMLTag root;
 	
 	/**
 	 * Constructor
 	 */
-	public XMLFile() {
-		
+	public XMLFile(XMLTag root) {
+		this.root = root;
 	}
 	
 }

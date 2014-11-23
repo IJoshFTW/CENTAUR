@@ -10,12 +10,30 @@ import java.util.HashMap;
  */
 public class XMLTag {
 	
-	ArrayList<XMLTag> subtags;
-	HashMap<String, String> atts;
-	String value;
+	private String name;
+	private ArrayList<XMLTag> elements;
+	private HashMap<String, String> atts;
+	private String content;
 	
-	public XMLTag() {
-		
+	public XMLTag(String name, HashMap<String, String> atts) {
+		this.name = name;
+		this.atts = atts;
+	}
+	
+	public void addElement(XMLTag subtag) {
+		elements.add(subtag);
+	}
+	
+	public ArrayList<XMLTag> getElements() {
+		return elements;
+	}
+	
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
+	public String getContent() {
+		return content;
 	}
 
 }
