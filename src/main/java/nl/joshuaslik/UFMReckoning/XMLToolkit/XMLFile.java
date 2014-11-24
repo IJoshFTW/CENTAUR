@@ -16,4 +16,14 @@ public class XMLFile {
 		this.root = root;
 	}
 	
+	/**
+	 * 
+	 * @param name
+	 * 			is the name of the element to get
+	 * @throws NoSuchElementException Is thrown if element is not found
+	 */
+	public String getContent(String name) throws NoSuchElementException {
+		return root.getContent(name);
+	}
+	
 }

@@ -26,6 +26,10 @@ public class XMLTagTest extends TestCase
 	{
     	return new TestSuite( XMLTagTest.class );
 	}
+	
+	/* === *** *** **  ** *** *** ===
+	 * === Tests after this point ===
+	 * === *** *** **  ** *** *** === */
 
 	/**
 	 * Rigourous Test :-)

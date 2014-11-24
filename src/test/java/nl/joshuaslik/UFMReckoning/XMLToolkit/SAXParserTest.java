@@ -26,6 +26,10 @@ public class SAXParserTest extends TestCase
 	{
     	return new TestSuite( SAXParserTest.class );
 	}
+	
+	/* === *** *** **  ** *** *** ===
+	 * === Tests after this point ===
+	 * === *** *** **  ** *** *** === */
 
 	/**
 	 * Rigourous Test :-)

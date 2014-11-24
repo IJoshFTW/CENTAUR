@@ -26,6 +26,10 @@ public class AppTest extends TestCase
 	{
     	return new TestSuite(AppTest.class);
 	}
+	
+	/* === *** *** **  ** *** *** ===
+	 * === Tests after this point ===
+	 * === *** *** **  ** *** *** === */
 
 	/**
 	 * Rigourous Test :-)
