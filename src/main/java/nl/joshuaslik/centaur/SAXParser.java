@@ -1,4 +1,4 @@
-package nl.joshuaslik.UFMReckoning.XMLToolkit;
+package nl.joshuaslik.centaur;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -6,8 +6,6 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-
-import nl.joshuaslik.UFMReckoning.App;
 
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -41,7 +39,7 @@ public class SAXParser extends DefaultHandler {
 		xr.setErrorHandler(handler);
 
 		// Parse each file provided on the command line.
-		ClassLoader classLoader = App.class.getClassLoader();
+		ClassLoader classLoader = SAXParser.class.getClassLoader();
 		InputStream is = classLoader.getResourceAsStream(filename);
 		try {
 			xr.parse(new InputSource(is));

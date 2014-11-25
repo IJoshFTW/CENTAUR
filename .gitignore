@@ -1,1 +1,32 @@
-gourcelog.log
+# These are all the directories and files that Git will not care about and will not include in its system.
+#
+# Use this carefully and consult somebody in the team with Git knowledge before altering this file
+#   if you don't know exactly what you are doing.
+
+# If you want a cool Gource configuration for this project, contact: Joshua Slik
+/gource/**
+
+# Exclude build files from the project
+/build/
+
+# Exclude Eclipse-specific files
+.settings
+.project
+.classpath
+
+# Exclude Sublime Text 3-specific files
+*.sublime-workspace
+*.sublime-project
+
+# Exclude commitlog file, so you can keep track of your changes up for commmitting
+commitlog
+
+# Thumbs ignore
+**/Thumbs.db
+
+# --------------------------------------------------------
+# !!! ONLY EXCEPTIONS BELOW THIS LINE PLEASE THANK YOU !!!
+# --------------------------------------------------------
+
+# Include the Gource captions, so other people can add milestones to them.
+!/gource/gource-captions.txt

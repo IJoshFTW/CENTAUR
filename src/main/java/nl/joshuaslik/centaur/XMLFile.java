@@ -1,4 +1,4 @@
-package nl.joshuaslik.UFMReckoning.XMLToolkit;
+package nl.joshuaslik.centaur;
 
 /**
  *

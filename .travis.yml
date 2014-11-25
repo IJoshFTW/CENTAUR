@@ -1,0 +1,27 @@
+language: java
+jdk:
+  - oraclejdk8
+
+before_deploy:
+  - mvn package
+  - cd build
+  - zip -r CENTAUR ./* -x ./maven-archiver\* ./maven-status\* ./classes\*  ./surefire-reports\* ./test-classes\*
+  - ls
+  - cd ..
+
+deploy:
+  provider: releases
+  api-key: "1e012471263182440d6f62b82a99e8d63df0dd5e"
+  file: "./build/CENTAUR.zip"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+    jdk: oraclejdk8
+
+notifications:
+  email:
+    recipients:
+      - joshua.b.slik@gmail.com
+    on_success: change
+    on_failure: always
