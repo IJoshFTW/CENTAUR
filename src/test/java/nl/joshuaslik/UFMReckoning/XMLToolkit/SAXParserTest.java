@@ -51,6 +51,14 @@ public class SAXParserTest extends TestCase {
 			e.printStackTrace();
 		}
 		
+		try {
+			System.out.println(result.getElement("PLAYER.NAME").getAttribute("first"));
+		} catch (NoSuchAttributeException | NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
 		System.out.println();
 	}
 

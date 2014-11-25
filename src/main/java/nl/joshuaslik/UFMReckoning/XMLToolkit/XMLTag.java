@@ -53,9 +53,22 @@ public class XMLTag {
 	 * @param element
 	 *            is the index of the element to get
 	 * @return the element
+	 * @throws NoSuchElementException 
 	 */
-	public XMLTag getElement(String element) {
-		return elements.get(element);
+	public XMLTag getElement(String element) throws NoSuchElementException {
+		if (element.equals(name)) {
+			return this;
+		} else {
+			// Get the string of the following elements (+ 1 to also chop off
+			// the '.')
+			int splitpoint = element.indexOf(".") + 1;
+			element = element.substring(splitpoint, element.length());
+			if (elements.containsKey(element))
+				return elements.get(element).getElement(element);
+			else
+				throw new NoSuchElementException(this.name
+						+ " does not have element " + element);
+		}
 	}
 	
 	public String getContent(String element) throws NoSuchElementException {

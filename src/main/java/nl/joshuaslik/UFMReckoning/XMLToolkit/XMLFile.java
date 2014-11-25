@@ -26,6 +26,10 @@ public class XMLFile {
 	public String getContent(String name) throws NoSuchElementException {
 		return root.getContent(name);
 	}
+	
+	public XMLTag getElement(String name) throws NoSuchElementException {
+		return root.getElement(name);
+	}
 
 	public String toString() {
 		return root.toString();
